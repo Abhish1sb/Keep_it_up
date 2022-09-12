@@ -1,10 +1,16 @@
-import React from 'react'
+import React, {useState} from 'react'
+import Note from './Note';
+import CreateArea from './CreateArea';
+
 
 const NoteSection = () => {
-  return (
-    <div>            <CreateArea />
-    {/* {notes.map( (obj) => (<Note key={obj.key} title={obj.title} content={obj.content} />) )} */}
-    <Note key={1} title="Note title" content="Note content" /></div>
+  const [notes,setNotes]=useState([]);
+
+    return (
+    <div>
+    <CreateArea notes={notes} hello={"hello"} setNotes={setNotes} />
+    {notes && notes.map( (obj,ind) => (<Note key={ind} id={ind} title={obj.title} content={obj.content} />) )};
+    </div>
   )
 }
 

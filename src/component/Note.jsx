@@ -1,4 +1,4 @@
-import React, {useState}  from "react";
+import React from "react";
 
 function Note(props){
    
@@ -7,7 +7,7 @@ function Note(props){
             <h4>{props.title}</h4>
             <p>{props.content}</p>
             <div className="btn">
-                <button className="deleter" ><i class="fa-solid fa-trash"></i></button>
+                <button className="deleter" ><i className="bi bi-trash"></i></button>
             </div>
         </div>
     )};
