@@ -8,8 +8,9 @@ const NoteSection = () => {
 
     return (
     <div>
-    <CreateArea notes={notes} hello={"hello"} setNotes={setNotes} />
-    {notes && notes.map( (obj,ind) => (<Note key={ind} id={ind} title={obj.title} content={obj.content} />) )};
+    <CreateArea notes={notes} setNotes={setNotes} />
+    {notes && notes.map( (obj,ind) => (  <Note key={ind} id={ind} title={obj.title} content={obj.content}
+    notes={notes} setNotes={setNotes} />) )};
     </div>
   )
 }

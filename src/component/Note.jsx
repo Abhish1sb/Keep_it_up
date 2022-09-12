@@ -1,13 +1,22 @@
 import React from "react";
 
-function Note(props){
-   
+function Note({ id, title, content, notes, setNotes }){
+    const deleteNote = (id) => {
+        setNotes(
+          notes.filter((item, index) => {
+            return index !== id ? item : null;
+          })
+        );
+      };
     return(
         <div className="note">
-            <h4>{props.title}</h4>
-            <p>{props.content}</p>
+            <h4>{title}</h4>
+            <p>{content}</p>
             <div className="btn">
-                <button className="deleter" ><i className="bi bi-trash"></i></button>
+                <button onClick={()=>{
+                        deleteNote(id);
+                    }
+                } className="deleter" ><i className="bi bi-trash"></i></button>
             </div>
         </div>
     )};
