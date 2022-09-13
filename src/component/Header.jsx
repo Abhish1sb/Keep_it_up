@@ -35,8 +35,6 @@ function Header(){
         theme.style.setProperty('--notebg','#6f6f6f');
         theme.style.setProperty('--grey','#eee');
         theme.style.setProperty('--black','#fff');
-
-    
         }
         else{
         document.getElementById("dark").classList.remove("active-btn");
